@@ -1,0 +1,102 @@
+﻿@page
+@model BancoProv_ssbaglia.Pages.Vistas.HomeEmpleadosModel
+@{
+
+   
+    <div class="row" style="margin-bottom: 5rem;margin-left: 3rem;">
+        <div style=" background-image:url(/Images/isologo.jpg)"> </div>
+        <div class="col-sm-6">
+            <h3> <b> Lista de Empleados</b>  </h3>
+        </div>
+
+
+    </div>
+
+    <form method="post">
+
+
+
+        <div class="col-md-6 text-decoration-none" style="margin-left: 57rem; margin-right: 57rem;">
+            <input class="buttons btn-primary  btn-sm" type="submit" asp-page-handler="AltaEmpleado" value="Agregar Empleado  ">
+        </div>
+
+        <div class="row" style=" margin-left: 3rem;">
+
+            @if (Model.Empleado.Count() > 0)
+            {
+
+                <table class=" table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <td>ID </td>
+                            <td>Codigo</td>
+                            <td>Apellido</td>
+                            <td>Nombre</td>
+                            <td>FechaAlta</td>
+                            <td>IdTipoDto</td>
+                            <td>NumDoc</td>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var item in Model.Empleado)
+
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Codigo</td>
+                                <td>@item.Apellido</td>
+                                <td>@item.Nombre</td>
+                                <td>@item.FechaAlta</td>
+                                @if (item.IdTipoDto == 1)
+                                {
+
+
+                                    <td> DNI </td>
+                                }
+                                else
+                                {
+                                    <td> PASAPORTE </td>
+
+                                }
+
+                                <td>@item.NumDocumento</td>
+
+                                <td>
+
+                                    <input class="buttons btn-primary  btn-sm" style=" margin-bottom: 10rem;" type="submit" asp-page-handler="Editar" value="Editar Empleado" asp-route-idEmpleado=@item.Id>
+                                    <input class="buttons btn-warning  btn-sm" style=" margin-bottom: 10rem;" type="submit" asp-page-handler="Eliminar" value="Eliminar Empleado" asp-route-idEmpleado=@item.Id>
+
+
+                                </td>
+
+                            </tr>
+
+
+
+
+                        }
+
+
+
+                    </tbody>
+
+
+                </table>
+
+                <div class="col-md-6 text-right">
+                    <a class="btn btn-primary" href="~/Index">Volver</a>
+                </div>
+            }
+            else
+            {
+                <p> No hay Empleados cargadas </p>
+            }
+
+
+
+        </div>
+    </form>
+}

@@ -1,0 +1,53 @@
+﻿@page
+@model BancoProv_ssbaglia.Pages.Vistas.AgregarEmpleadoModel
+@{
+
+    <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title> Alta Empleado</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+    <body>
+        <section class="form-loginAltaUsuario">
+            <form method="post">
+
+                <h2> Alta Empleado</h2>
+
+
+
+                <input asp-for="@Model.empleado.Nombre" class="controls" type="text" name="nombre" placeholder="Nombre">
+                <input asp-for="@Model.empleado.Apellido" class="controls" type="text" name="apellido" placeholder="Apellido">
+                <input asp-for="@Model.empleado.Codigo" class="controls" type="text" name="codigo" placeholder="Codigo">
+                @*<input asp-for="@Model.empleado.FechaAlta" class="controls" type="date" name="usuario" placeholder="Fecha Alta">*@
+
+                <select class="controls" asp-for="@Model.tiposDocumento.Id"  >
+                    <option value="">
+                        Seleccione opci&oacute;n
+                    </option>
+                    <option value="1">
+                        Dni
+                    </option>
+                    <option value="2">
+                        Pasaporte
+                    </option>
+
+                </select>
+                <input asp-for="@Model.empleado.NumDocumento" class="controls" type="number" name="NumDocumento" placeholder="Numero Documento">
+
+                <input class="buttons btn-primary  btn-sm"   type="submit" asp-page-handler="AltaAdministrador" value=" INGRESAR " onclick="ConfirmarUsuario()">
+                @Html.ValidationMessageFor(Model => Model.ErrorMessage, "", new { @class = "text-danger" })
+                <div class="col-md-6 text-right">
+                    <a class="btn btn-primary" href="/Index">Volver</a>
+                </div>
+
+            </form>
+
+
+        </section>
+        
+        <script src="~/js/MensajesUsuario.js"></script>
+    </body>
+</html>
+}

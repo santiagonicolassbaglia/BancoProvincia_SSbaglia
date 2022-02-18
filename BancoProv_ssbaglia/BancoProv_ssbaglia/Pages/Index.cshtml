@@ -1,0 +1,42 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Login</title>
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+<body>
+    <div style=" background-image:url( /wwwroot/Images/logo.jpg)"> </div>
+    <section class="form-login">
+
+        <h5> Login</h5>
+
+        <form method="post">
+
+            <input asp-for="@Model.empleado.Nombre" class="controls" type="text" name="Nombre" placeholder="Nombre">
+
+
+            <input asp-for="@Model.empleado.NumDocumento" class="controls" type="number" name="NumDocumento" placeholder="Documento">
+
+            <input class="buttons btn-primary btn-sm" type="submit" asp-page-handler="BtnIngresar_Click" value=" INGRESAR">
+            @Html.ValidationMessageFor(Model => Model.ErrorMessage, "", new { @class = "text-danger" })
+
+            <div class="col-4" style="margin-top:15px; " form-group>
+                <input type="hidden" class="form-control">
+                <div class="input-group">
+                    <input type="submit" value="Registrate" asp-page-handler="AltaEmpleado_Click" style=" margin-left: 12rem;width: 100px;background-color: #057bab; ">
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+</body>
+</html>

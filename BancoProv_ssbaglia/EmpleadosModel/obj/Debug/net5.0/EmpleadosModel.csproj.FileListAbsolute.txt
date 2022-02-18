@@ -1,0 +1,12 @@
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\bin\Debug\net5.0\EmpleadosModel.deps.json
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\bin\Debug\net5.0\EmpleadosModel.dll
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\bin\Debug\net5.0\ref\EmpleadosModel.dll
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\bin\Debug\net5.0\EmpleadosModel.pdb
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\obj\Debug\net5.0\EmpleadosModel.csproj.AssemblyReference.cache
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\obj\Debug\net5.0\EmpleadosModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\obj\Debug\net5.0\EmpleadosModel.AssemblyInfoInputs.cache
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\obj\Debug\net5.0\EmpleadosModel.AssemblyInfo.cs
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\obj\Debug\net5.0\EmpleadosModel.csproj.CoreCompileInputs.cache
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\obj\Debug\net5.0\EmpleadosModel.dll
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\obj\Debug\net5.0\ref\EmpleadosModel.dll
+C:\Users\santi\source\repos\BancoProv_ssbaglia\EmpleadosModel\obj\Debug\net5.0\EmpleadosModel.pdb
